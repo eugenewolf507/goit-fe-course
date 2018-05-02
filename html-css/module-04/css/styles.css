@@ -1,0 +1,184 @@
+@import url(normalize.css);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+body {
+  width: 1647px;
+}
+
+.wrapper {
+  width: 1140px;
+  margin: 33px auto 84px;
+}
+
+.logo {
+  float: left;
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  text-indent: 15px;
+  line-height: 1.067;
+  color: #555252;
+  text-transform: uppercase;
+}
+
+.logo::first-letter {
+  font-weight: bold;
+  color: #1abc9c;
+}
+
+.nav-list {
+  display: inline-block;
+  margin-left: 495px;
+  margin-top: 7px;
+  font-family: "Open Sans Black", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+.nav-list > li {
+  float: left;
+  margin-left: 30px;
+  color: #0f0101;
+}
+
+.nav-list > li:hover {
+  color: #1abc9c;
+}
+
+.clear {
+  clear: both;
+}
+
+.titles {
+  /*Main title for products and news*/
+  position: relative;
+  margin-top: 80px;
+  margin-bottom: 115px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #555252;
+}
+
+.titles::after {
+  content: "";
+  position: absolute;
+  left: 488px;
+  height: 78px;
+  width: 164px;
+  border-bottom: 7px solid;
+  border-color: #4ec6ab;
+}
+
+.products-list {
+  height: auto;
+  overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.products-list > li {
+  float: left;
+  margin: 5px 15px 15px 15px;
+  position: relative;
+}
+
+.products-list > li::before {
+  content: "";
+  position: absolute;
+  top: 282px;
+  left: 0px;
+  height: 30px;
+  width: 241px;
+  padding-left: 14px;
+  padding-top: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #323232;
+}
+
+.products-list > li::after {
+  content: "";
+  position: absolute;
+  top: 282px;
+  left: 201px;
+  height: 30px;
+  width: 40px;
+  padding-left: 14px;
+  padding-top: 10px;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.44);
+}
+
+/* it is weird, but i must use pseudo-elements */
+.products-list > li:hover::before {background-color: #1abc9c;}
+
+.products-list > li:nth-child(4n+1)::before {content: "blue tshirt";}
+.products-list > li:nth-child(4n+1)::after {content: "$26";}
+
+.products-list > li:nth-child(4n+2)::before {content: "woman shirt";}
+.products-list > li:nth-child(4n+2)::after {content: "$31";}
+
+.products-list > li:nth-child(4n+3)::before {content: "yellow tshirt";}
+.products-list > li:nth-child(4n+3)::after {content: "$21";}
+
+.products-list > li:nth-child(4n)::before {content: "cool lingerie";}
+.products-list > li:nth-child(4n)::after {content: "$56";}
+
+.news-article {
+  float: left;
+  width: 350px;
+  margin: 0px 15px 0px 15px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.news-title {
+  /*Title for each news article*/
+  position: relative;
+  margin: 0px 0px 35px 0px;
+  font-size: 18px;
+  color: #555252;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.news-title::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  height: 37px;
+  width: 136px;
+  border-bottom: 3px solid;
+  border-color: #4ec6ab;
+}
+
+.news-text {
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.857;
+  color: #555252;
+}
+
+.readmore-button {
+  width: 160px;
+  height: 51px;
+  margin-bottom: 80px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #fff;
+  border: 0;
+  border-radius: 3px;
+  background-color: #4ec6ab;
+}
+
+.readmore-button:hover {box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.39);}
