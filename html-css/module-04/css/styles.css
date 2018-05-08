@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 body {
-  width: 1647px;
 }
 
 .wrapper {
@@ -26,8 +25,8 @@ body {
 }
 
 .nav-list {
-  display: inline-block;
-  margin-left: 495px;
+  float:right;
+  margin: 50px 0;
   margin-top: 7px;
   font-family: "Open Sans Black", sans-serif;
   font-size: 14px;
@@ -154,8 +153,8 @@ body {
   content: "";
   position: absolute;
   left: 0px;
-  height: 37px;
   width: 136px;
+  bottom: -12px;
   border-bottom: 3px solid;
   border-color: #4ec6ab;
 }
