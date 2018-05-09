@@ -3,10 +3,7 @@
 @import url("../fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css"); /*icons font*/
 @import url("../fonts/pe-icon-7-stroke/css/helper.css"); /*modify the icons display, size etc...*/
 
-body {
-  width: 1600px;
-  background-color: #e9f0fd;
-}
+body {background-color: #e9f0fd;}
 
 .centered {
   width: 1140px;
@@ -59,9 +56,9 @@ body {
 
 .slider {
 position: relative;
-width: 1600px;
 height: 600px;
 background-image: url("../img/slider.jpg");
+background-position: center;
 }
 
 .slider-title, .slider-hint, .slider-control-left, .slider-control-right {
@@ -70,7 +67,7 @@ background-image: url("../img/slider.jpg");
 
 .slider-title {
   top: 205px;
-  left: 430px;
+  left: 260px;
   margin: 0;
   font-family: "Open Sans Bold", sans-serif;
   font-size: 60px;
@@ -81,7 +78,7 @@ background-image: url("../img/slider.jpg");
 
 .slider-hint {
   top: 291px;
-  left: 430px;
+  left: 260px;
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
   text-transform: uppercase;
@@ -92,7 +89,7 @@ background-image: url("../img/slider.jpg");
  .slider-control-left
   {
   top: 225px;
-  left: 245px;
+  left: 75px;
   width: 104px;
   height: 104px;
   background-color: rgba(78, 198, 171, 0.65);
@@ -103,8 +100,8 @@ background-image: url("../img/slider.jpg");
 
 .slider-control-right {
   top: 225px;
-  left: 1252px;
-  width: 104px;
+  left: 1090px;
+  width: 95px;
   height: 104px;
   background-color: rgba(78, 198, 171, 0.65);
   font-size: 105px;
