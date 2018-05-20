@@ -1,0 +1,292 @@
+@import url("normalize.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 1230px;
+  margin: 0 auto 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 23px;
+  margin-left: 14px;
+  margin-bottom: 120px;
+  width: 1216px;
+}
+
+.logo > a {
+  font-family: "Montserrat Bold", sans-serif;
+  font-weight: Bold;
+  font-size: 30px;
+  text-decoration: none;
+  color: #95e1d3;
+}
+
+.nav {
+  flex-basis: 41.5%;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 17px;
+  flex-basis: 100%;
+  list-style-type: none;
+}
+
+.nav-items {text-transform: uppercase;}
+
+.nav-items > a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: Bold;
+  font-size: 14px;
+  color: #95e1d3;
+  padding-bottom: 9px;
+  text-decoration: none;
+}
+
+.nav-items > a:hover {
+  color: #f38181;
+  border-bottom: 3px solid #f38181;
+}
+
+.pre-title {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Kaushan Script", cursive;
+  color: #333333;
+}
+
+.title {
+  margin-top: 15px;
+  font-size: 30px;
+  font-family: "Montserrat Bold", sans-serif;
+  color: #333333;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.title-red-line {
+  width: 60px;
+  height: 3px;
+  margin: 35px auto 10px;
+  background-color: #f38181;
+}
+
+.team-description {
+  width: 950px;
+  margin-left: 130px;
+  margin-top: 35px;
+  margin-bottom: 87px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  color: #999999;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.service-list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  margin-top: 66px;
+  margin-left: 45px;
+}
+
+.service-items {
+  display: inline-flex;
+  flex-basis: 33%;
+  margin-bottom: 95px;
+}
+
+.service-column {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.service-title {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.service-text {
+  margin-top: 10px;
+  width: 290px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  color: 999999;
+  line-height: 1.6;
+}
+
+.collective {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.employee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  margin-top: 30px;
+  font-family: "Montserrat", sans-serif
+  font-size: 14px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.position {
+  margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #999;
+  font-style: italic;
+}
+
+.photo {
+  position: relative;
+  line-height: 0;
+  background-image: url (../img/matthew-dix.jpg);
+}
+
+.photo-gradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    rgba(252, 227, 138, 0.9),
+    rgba(243, 129, 129, 0.9)
+  );
+  opacity: 0;
+  content: "";
+}
+
+.photo-hover:hover .photo-gradient {
+  opacity: 1;
+  transition: opacity 200ms linear;
+}
+
+.photo-hover:hover .share-list {
+  transform: scale(1);
+  transition: all 200ms linear;
+}
+
+.photo-hover:hover .photo {
+  transform: translate(-10px, -10px);
+  transition: all 200ms linear;
+  box-shadow: 10px 10px #95e1d3;
+}
+
+.share-list {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 77px;
+  top: 208px;
+  width: 227px;
+  justify-content: space-between;
+  transform: scale(0, 0);
+}
+
+.share-items:nth-child(1) {
+  background: url(../img/facebook.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fce38a;
+}
+.share-items:nth-child(2) {
+  background: url(../img/twitter.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fce38a;
+}
+.share-items:nth-child(3) {
+  background: url(../img/pinterest.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fce38a;
+}
+.share-items:nth-child(4) {
+  background: url(../img/instagram.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fce38a;
+}
+
+.share-items {
+  width: 56px;
+  height: 56px;
+  list-style-type: none;
+}
+
+.share-items:hover {
+  background-color: #95e1d3;
+  transition: all 200ms linear;
+}
+
+.share-items > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  margin-top: 83px;
+  margin-left: 15px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  border-top: 1px solid #777;
+}
+
+.footer-red {
+  color: #f38181;
+}
+
+.form {
+  display: flex;
+}
+
+.email-input {
+  width: 230px;
+  height: 40px;
+  border-color: 1px solid #e7e7e7;
+}
+
+.submit-button {
+  width: 150px;
+  height: 44px;
+  background-color: #95e1d3;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 0;
+}
