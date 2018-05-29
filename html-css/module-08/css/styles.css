@@ -1,0 +1,252 @@
+@import url("normalize.css");
+@import url("fonts.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 320px;
+}
+
+.header {
+  height: 540px;
+  background-image: url("../img/header-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 0;
+}
+
+.log-in-sign-up {
+  margin-top: 20px;
+}
+
+.log-in,
+.sign-up {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-weight: 700;
+}
+
+.log-in {
+  margin-right: 10px;
+  border: none;
+  background: none;
+}
+
+.sign-up {
+  width: 91px;
+  height: 36px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #fff;
+  border-radius: 18px;
+  background-color: rgba(26, 25, 21, 0);
+}
+
+.logo {
+  margin-top: 118px;
+}
+
+.header-title {
+  margin-top: 30px;
+  margin-bottom: 0px;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.header-subtitle {
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  line-height: 1.2;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+}
+
+.header-button {
+  width: 280px;
+  height: 40px;
+  margin-top: 16px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(255, 78, 80);
+}
+
+.main-centered {
+  margin: 0 auto 0;
+  text-align: center;
+}
+
+.main-title {
+  margin-top: 67px;
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.all-partners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.partner {
+  list-style: none;
+  text-align: center;
+}
+
+.partner-photo {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.partner-icon {
+  position: relative;
+  right: 50px;
+  margin-bottom: 10px;
+  border: 3px solid #fff;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.partner-title {
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  font-weight: 700;
+}
+
+.partner-about {
+  width: 200px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(102, 102, 102);
+  line-height: 1.2;
+}
+
+.see-other {
+  width: 284px;
+  height: 44px;
+  margin: 0 auto 40px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: #ff4e50;
+  font-weight: 700;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ff4e50;
+  border-radius: 20px;
+  background: #fff;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 540px;
+  }
+
+  .header-centered {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header {
+    height: 702px;
+  }
+
+  .log-in-sign-up,
+  .logo {
+    flex-basis: 50%;
+    margin-top: 40px;
+  }
+
+  .logo {
+    order: 0;
+  }
+
+  .log-in-sign-up {
+    order: 1;
+    text-align: right;
+  }
+
+  .header-title {
+    margin-top: 140px;
+    font-size: 52px;
+    flex-basis: 100%;
+    order: 3;
+  }
+
+  .header-subtitle {
+    margin-top: 22px;
+    margin-bottom: 36px;
+    font-size: 24px;
+    flex-basis: 100%;
+    order: 4;
+  }
+
+  .header-button {
+    width: 225px;
+    order: 5;
+  }
+
+  .all-partners {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+
+  .main-title {
+    margin-bottom: 32px;
+  }
+
+  .see-other {
+    width: 190px;
+    height: 40px;
+    margin-top: 30px;
+  }
+}
+/* end of  @media (min-width: 768px)*/
+
+@media (min-width: 940px) {
+  .wrapper {
+    width: 940px;
+  }
+
+  .header-centered {
+    justify-content: center;
+  }
+
+  .header-title {
+    flex-basis: 600px;
+  }
+}
+/* end of  @media (min-width: 940px)*/
