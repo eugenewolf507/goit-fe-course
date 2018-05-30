@@ -128,12 +128,21 @@
 
 .partner-icon {
   position: relative;
-  right: 50px;
-  margin-bottom: 10px;
-  border: 3px solid #fff;
-  background-color: red;
+  display: inline;
+  right: 42px;
+  bottom: 20px;
+  padding: 8px;
+  border: 4px solid #fff;
+  /* background-color: red; */
   border-radius: 50%;
 }
+
+.partner-icon:nth-child(1) {background-color: #ff4e50;}
+
+.partner-icon-bgcolor-1 {background-color: #ff4e50;}
+.partner-icon-bgcolor-2 {background-color: #1cd7ad;}
+.partner-icon-bgcolor-3 {background-color: #ffa507;}
+.partner-icon-bgcolor-4 {background-color: #4e73db;}
 
 .partner-title {
   margin-bottom: 15px;
