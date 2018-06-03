@@ -1,5 +1,6 @@
 @import url("normalize.css");
 @import url("fonts.css");
+@import url("bootstrap-grid.css");
 
 * {
   padding: 0;
@@ -7,27 +8,18 @@
   box-sizing: border-box;
 }
 
-.wrapper {
-  width: 320px;
-}
-
-.header {
-  height: 540px;
+.background {
+  height: 480px;
   background-image: url("../img/header-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-}
-
-.header-centered {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto 0;
+  background-position: top;
 }
 
 .log-in-sign-up {
+  text-align: center;
   margin-top: 20px;
+  margin-bottom: 95px;
 }
 
 .log-in,
@@ -55,7 +47,8 @@
 }
 
 .logo {
-  margin-top: 118px;
+  text-align: center;
+  margin-top: 26px;
 }
 
 .header-title {
@@ -82,9 +75,10 @@
 }
 
 .header-button {
-  width: 280px;
+  width: 100%;
   height: 40px;
   margin-top: 16px;
+  margin-bottom: 140px;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   color: #fff;
@@ -92,11 +86,6 @@
   border-radius: 20px;
   border: none;
   background-color: rgb(255, 78, 80);
-}
-
-.main-centered {
-  margin: 0 auto 0;
-  text-align: center;
 }
 
 .main-title {
@@ -110,27 +99,26 @@
   text-align: center;
 }
 
-.all-partners {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .partner {
-  list-style: none;
   text-align: center;
+  position: relative;
 }
 
 .partner-photo {
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
+  width: 123px;
+  height: 123px;
+  box-sizing: content-box;
+  display: block;
 }
 
 .partner-icon {
-  position: relative;
-  display: inline;
-  right: 42px;
-  bottom: 20px;
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  right: 34%;
+  top: 90px;
   padding: 8px;
   border: 4px solid #fff;
   border-radius: 50%;
@@ -150,6 +138,7 @@
 }
 
 .partner-about {
+  margin: 0 auto 0;
   width: 200px;
   margin-bottom: 30px;
   font-size: 14px;
@@ -159,9 +148,9 @@
 }
 
 .see-other {
-  width: 284px;
+  width: 100%;
   height: 44px;
-  margin: 0 auto 40px;
+  margin-bottom: 40px;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   color: #ff4e50;
@@ -172,87 +161,3 @@
   border-radius: 20px;
   background: #fff;
 }
-
-@media (min-width: 768px) {
-  .wrapper {
-    width: 540px;
-  }
-
-  .header-centered {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .header {
-    height: 702px;
-  }
-
-  .log-in-sign-up,
-  .logo {
-    flex-basis: 50%;
-    margin-top: 40px;
-  }
-
-  .logo {
-    order: 0;
-  }
-
-  .log-in-sign-up {
-    order: 1;
-    text-align: right;
-  }
-
-  .header-title {
-    margin-top: 140px;
-    font-size: 52px;
-    flex-basis: 100%;
-    order: 3;
-  }
-
-  .header-subtitle {
-    margin-top: 22px;
-    margin-bottom: 36px;
-    font-size: 24px;
-    flex-basis: 100%;
-    order: 4;
-  }
-
-  .header-button {
-    width: 225px;
-    order: 5;
-  }
-
-  .all-partners {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: baseline;
-  }
-
-  .main-title {
-    margin-bottom: 32px;
-  }
-
-  .see-other {
-    width: 190px;
-    height: 40px;
-    margin-top: 30px;
-  }
-}
-/* end of  @media (min-width: 768px)*/
-
-@media (min-width: 940px) {
-  .wrapper {
-    width: 940px;
-  }
-
-  .header-centered {
-    justify-content: center;
-  }
-
-  .header-title {
-    flex-basis: 600px;
-  }
-}
-/* end of  @media (min-width: 940px)*/
