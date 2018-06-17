@@ -1,0 +1,102 @@
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+.program {
+  font-family: $main-font;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -1%;
+    margin-right: -1%;
+    counter-reset: count-box; //Counter
+  }
+}
+
+.article-title {
+  @extend %article-title;
+  display: inline-block;
+  margin-bottom: 60px;
+  
+  &--invert-color {
+    @extend %inverted-colors;
+  }
+}
+
+.program-item {
+  flex-basis: 31%;
+  margin-left: 1%;
+  margin-right: 1%;
+  @include tablet {
+    flex-basis: 48%;
+  }
+  @include mobile {
+    flex-basis: 100%;
+  }
+  display: flex;
+  counter-increment: count-box; //Counter
+  
+  &__number {
+    width: 26%;
+    font-size: $title-h3-font-size;
+    // background-color: rgba(59, 238, 149, 0.2);
+    font-weight: 900;
+    position: relative;
+    overflow: hidden;
+
+    &--displaced {
+      position: absolute;
+      left: -15px;
+
+      &::before {
+        content: "0"counter(count-box)"."; //Counter
+      }
+    }
+
+    &::after {
+      position: absolute;
+      left: 38px;
+      top: 50px;
+      width: 8px;
+      height: 8px;
+      background-color: $mark-color;
+      content: "";
+    }
+  }
+
+  &__inner {  //inner for program-item__pretitle, title, text
+    width: 74%;
+    padding-bottom: calculateRem(20px);
+    // outline: 1px solid rgba(224, 63, 144, 0.2);
+  }
+
+  &__pretitle {
+    margin: 0;
+    font-size: $title-h4-font-size;
+    text-transform: uppercase;
+    font-weight: 900;
+
+    &::before {
+      content: "блок "counter(count-box)"."; //Counter
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding-top: calculateRem(2px);
+    padding-bottom: calculateRem(4px);
+    font-size: $title-h4-font-size;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: calculateRem(20px);
+  }
+  
+  &__text {
+    font-size: $title-h4-font-size;
+  }
+
+}
