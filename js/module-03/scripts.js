@@ -12,7 +12,7 @@ const checkLoginValidity = login => login.length >= 4 && login.length <= 16;
 const checkIfLoginExists = (logins, login) => logins.includes(login);
 
 const addLogin = (logins, login) => {
-  if (checkLoginValidity(login) === false) {
+  if (!checkLoginValidity(login)) {
     alert(messageErrorLoginLength);
   } else {
     if (checkIfLoginExists(logins, login)) {
