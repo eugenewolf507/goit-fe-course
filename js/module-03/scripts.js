@@ -7,38 +7,19 @@ const messageLoginAdded = "Логин успешно добавлен!";
 const messageErrorLoginExist = "Такой логин уже используется!";
 
 const login = prompt("Введите, пожалуйста, логин.");
-// alert(login.length);
 
-const checkLoginValidity = login => {
-  if (login.length >= 4 && login.length <= 16) {
-    return true;
-  } else {
-    return false;
-  }
-};
-
-// alert (checkLoginValidity(login));
-
-const checkIfLoginExists = (logins, login) => {
-  for (const value of logins) {
-    if (value === login) {
-      return true;
-    }
-  }
-  return false;
-};
-
-// alert(checkIfLoginExists(logins, login));
+const checkLoginValidity = login => login.length >= 4 && login.length <= 16;
+const checkIfLoginExists = (logins, login) => logins.includes(login);
 
 const addLogin = (logins, login) => {
   if (checkLoginValidity(login) === false) {
-    return alert(messageErrorLoginLength);
+    alert(messageErrorLoginLength);
   } else {
-    if (checkIfLoginExists(logins, login) === false) {
+    if (checkIfLoginExists(logins, login)) {
+      alert(messageErrorLoginExist);
+    } else {
       logins.push(login);
       alert(messageLoginAdded);
-    } else {
-      alert(messageErrorLoginExist);
     }
   }
 };
