@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+
+      <form class="search-form">
+        <button type="submit" id="js-btn-all" class="btn" type="submit">getAllUsers()</button>
+      </form>
+
+      <form class="search-form" id="findById">
+        <input type="text" name="byIdId" placeholder="Enter user ID">
+        <button type="submit" id="js-btn-id" class="btn">getUserById(id)</button>
+      </form>
+
+      <form class="search-form">
+        <input type="text" name="addName" placeholder="Enter user name">
+        <input type="text" name="addAge" placeholder="Enter user age">
+        <button type="submit" id="js-btn-add" class="btn">addUser(name, age)</button>
+      </form>
+
+      <form class="search-form">
+        <input type="text" name="updId" placeholder="Enter user ID">
+        <input type="text" name="updName" placeholder="Enter user name">
+        <input type="text" name="updAge" placeholder="Enter user age">
+        <button type="submit" id="js-btn-upd" class="btn">updateUser(id, user)</button>
+      </form>
+
+      <form class="search-form">
+        <input type="text" name="delId" placeholder="Enter user ID">
+        <button type="submit" id="js-btn-rm" class="btn">removeUser(id)</button>
+      </form>
+
+    </div>
+    
+      <table class="output-table" id="js-output">
+      </table>
+      
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
