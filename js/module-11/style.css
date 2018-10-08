@@ -1,0 +1,26 @@
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.form {
+  min-width: 150px;
+}
+
+#output-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.laptop_card {
+  border: 1px solid grey;
+  padding: 10px;
+  flex-basis: 30%;
+  margin: 0.2%;
+}
