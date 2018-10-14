@@ -148,6 +148,7 @@ function outputLaptops(filteredLaptopsList) {
 function submitFunc(event) {
   event.preventDefault();
   const filter = getFilterParams();
+  console.log(filter);
   const filteredLaptopsList = filterLaptots(laptops, filter);
   outputLaptops(filteredLaptopsList);
 }
@@ -156,6 +157,11 @@ function resetFunc() {
   const container = document.querySelector("#output-container");
   container.innerHTML = '';
 }
+
+//show all laptops before filtering
+const filter = { size: [], color: [], release_date: [] };
+const filteredLaptopsList = filterLaptots(laptops, filter);
+outputLaptops(filteredLaptopsList);
 
 form.addEventListener("submit", submitFunc);
 form.addEventListener("reset", resetFunc);
