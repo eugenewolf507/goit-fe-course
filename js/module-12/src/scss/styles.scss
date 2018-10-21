@@ -1,0 +1,35 @@
+/*
+   Import partials below
+*/
+@import 'normalize';
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.inputForm {
+  padding: 20px;
+}
+
+.inputForm__inputUrl {
+  min-width: 400px;
+}
+
+.output {
+  display: flex;
+  flex-direction: row;
+  padding: 7px;
+}
+
+.img {
+  width: 200px;
+}
+
+.output__img, .output__txt, .output__btn {
+  padding: 10px;
+}
+
+.output__h2, .output__h3, .output__p {
+  padding: 3px 0;
+}
