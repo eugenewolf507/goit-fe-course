@@ -6,13 +6,14 @@ var apiKey = "5bbc427db184bade881089c46d1ce94309e553dcca374";
 // const apiKey = "5bb920a205cea06f38e7909709a72b521a4a9d1c05841";
 
 urlsList = JSON.parse(localStorage.getItem('urlsList')); //read from local storage
-
-//fetch for output urls list from local storage
-urlsList.forEach(function (urlAdres) {
-  linkpreviewAPI(urlAdres).then(function (data) {
-    outputHandlebars(data);
+if (urlsList.length) {
+  //fetch for output urls list from local storage
+  urlsList.forEach(function (urlAdres) {
+    linkpreviewAPI(urlAdres).then(function (data) {
+      outputHandlebars(data);
+    });
   });
-});
+}
 
 urlInputForm.addEventListener("submit", addUrl);
 
