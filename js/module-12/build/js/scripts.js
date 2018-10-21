@@ -4,9 +4,10 @@ var urlInputForm = document.querySelector("#urlInputForm");
 var urlsList = [];
 var apiKey = "5bbc427db184bade881089c46d1ce94309e553dcca374";
 // const apiKey = "5bb920a205cea06f38e7909709a72b521a4a9d1c05841";
+var urlsListFromLocalStorage = JSON.parse(localStorage.getItem('urlsList')); //read from local storage
 
-urlsList = JSON.parse(localStorage.getItem('urlsList')); //read from local storage
-if (!urlsList) {
+if (urlsListFromLocalStorage) {
+  urlsList = urlsListFromLocalStorage;
   //fetch for output urls list from local storage
   urlsList.forEach(function (urlAdres) {
     linkpreviewAPI(urlAdres).then(function (data) {
